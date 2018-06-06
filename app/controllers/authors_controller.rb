@@ -13,6 +13,12 @@ class AuthorsController < ApplicationController
     redirect_to author_path(@author)
   end
 
+  def update
+    @author.update(author_params)
+
+    redirect_to author_path(@author)
+  end
+
   private
 
   def author_params
